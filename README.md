@@ -1,2 +1,9 @@
-# Facial-Expression-Recognition
-This repository contains MATLAB coded for auto-FER (Facial Expression Recognition) using Alexnet.
+# **Auto FER (Facial Expression Recognition)**
+
+
+---
+
+I implemented two techniques for auto-FER. First, I retrained AlexNet, used transfer learning for classification. Second, I used CNN for feature extraction and cascaded it with an SVM for classification. 
+
+
+I achieved 93% accuracy with AlexNet and 95% with CNN-SVM cascade which is comparable with the contemporary methods that give 96-98%. Data augmentation and training with larger dataset can improve the accuracy with deep learning

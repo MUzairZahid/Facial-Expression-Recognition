@@ -15,4 +15,4 @@ I used [JAFFE Data Set](https://http://www.kasrl.org/jaffe.html) to train my bot
 ## The Japanese Female Facial Expression (JAFFE) Database:
 The database contains 213 images of 7 facial expressions (6 basic facial expressions + 1 neutral) posed by 10 Japanese female models. Each image has been rated on 6 emotion adjectives by 60 Japanese subjects. 
 
-![example_dataset](example_dataset.png)
+![example_dataset](example_dataset.PNG)

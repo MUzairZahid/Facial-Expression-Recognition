@@ -5,11 +5,14 @@
 
 I implemented two techniques for auto-FER. 
 
-* **First, I retrained AlexNet, used transfer learning for classification. 
+* First, I retrained AlexNet, used transfer learning for classification. 
 
 Training and Testing has been done on the AlexNet with JAFFE database. Since AlexNet only accepts the image with input size of 227x227x3, so we replicated the channel three times to converted our single channel grayscale images of JAFFE to three channels. Also, the input image size was different so, we resized the image. 
+
 With the help of viola jones algorithm, we detect the faces from images and then cropped it. Its implementation is available in Matlab Computer Vision toolbox and the main functionality of viola jones algorithm is to give the object detection bounding box. 
+
 For the Fully Connected layer and initial learning, we considered multiple parameters I.e. mini-batch size, max epochs, WeightLearnRateFactor and BiasLearnRateFactor, as mentioned in referenced paper. 
+
 The last three layers of pretrained network alexnet are configured for 1000 classes however, we performed fine-tuning of these classes since we wanted to detect 5 classes. For our classification, 23rd fully connected layer was changed to 5 and we also retrained the subsequent two softmax and classification output layers. 
 
 * Second, I used AlexNet for feature extraction and cascaded it with an SVM for classification. 

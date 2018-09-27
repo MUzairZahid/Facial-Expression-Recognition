@@ -18,8 +18,8 @@ The database contains 213 images of 7 facial expressions (6 basic facial express
 
 ![example_dataset](example_dataset.PNG)
 
-
 ---
+
 ## Details:
 
 #### Preprocessing:
@@ -27,12 +27,15 @@ Since AlexNet only accepts the image with input size of 227x227x3, so we replica
 
 With the help of viola jones algorithm, we detect the faces from images and then cropped it. Its implementation is available in Matlab Computer Vision toolbox and the main functionality of viola jones algorithm is to give the object detection bounding box. 
 
+---
+
 ### Method 1 (Transfer Learning):
 For the Fully Connected layer and initial learning, we considered multiple parameters I.e. mini-batch size, max epochs, WeightLearnRateFactor and BiasLearnRateFactor, as mentioned in referenced paper. 
 
 The last three layers of pretrained network alexnet are configured for 1000 classes however, we performed fine-tuning of these classes since we wanted to detect 5 classes. For our classification, 23rd fully connected layer was changed to 5 and we also retrained the subsequent two softmax and classification output layers. 
 
 ---
+
 ### Method 2 (Feature Extraction Using Alexnet):
 
 In our second approach implementation, features were extracted from the fully connected layer FC7 of Alexnet. Based on this, the feature vector and feature matrix with training labels were formed and fed them to the SVM which is, in our case, a MATLAB Machine Learning toolbox built-in classifier.  
@@ -42,5 +45,11 @@ Random splitting with 30-70 ratio was done for the test and train images which l
 
 We achieved 93% and 95% accuracy for transfer learning and feature extraction-SVM approach respectively. 
 
+---
+
 **Note: It took 5 hours with 10 epochs to train the first approach on core i5 with 4 gb RAM.
+
+## Reference Paper:
+Tanner Gilligan and Baris Akis, “Emotion AI, Real-Time Emotion Detection using CNN”, Stanford
+project.
 

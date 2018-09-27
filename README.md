@@ -47,7 +47,7 @@ We achieved 93% and 95% accuracy for transfer learning and feature extraction-SV
 
 ---
 
-** Note: It took 5 hours with 10 epochs to train the first approach on core i5 with 4 gb RAM.
+Note: It took 5 hours with 10 epochs to train the first approach on core i5 with 4 gb RAM.
 
 ## Reference Paper:
 Tanner Gilligan and Baris Akis, “Emotion AI, Real-Time Emotion Detection using CNN”, Stanford
